@@ -1,0 +1,106 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(130deg , #54056e, #5bac03);
+    padding: 10px;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+
+.todo-app{
+    width: 100%;
+    max-width: 500px;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+.todo-app h2{
+    text-align: center;
+    color: #4e4c4c;
+    display: flex;
+    margin-bottom: 20px;
+}
+.todo-app img{
+    width: 30px;
+    margin-left: 10px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    background: #dddcdc;
+    border-radius: 30px;
+    padding-left: 20px;
+        font-size: 17px;
+
+}
+input{
+    flex:1;
+    border:none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-size: 16px;
+
+}
+button{
+    padding: 16px 20px;
+    border:none;
+    outline: none;
+    background: #5bac03;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+button:hover{
+    background-color: #96dd4b;
+    box-shadow: #4e4c4c 0px 4px 8px;
+}
+ul li{
+    list-style: none;
+    color: #4e4c4c;
+    padding: 12px 8px 12px 40px;
+    user-select: none;
+    font-size: 17px;
+    position: relative;
+    cursor: pointer;
+    
+}
+ul li::before{
+    content: '';
+    cursor: pointer;
+    background-image: url("images/dry-clean.png");
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 12px;
+    left: 8px;
+    border-radius: 50%;
+}
+.selected{
+    text-decoration: line-through;
+    color: #636161;
+ 
+}
+ul li.selected::before{
+    background-image: url("images/accept.png");
+    background-size: cover;
+    background-position: center;
+     width: 20px;
+    height: 20px;
+}
